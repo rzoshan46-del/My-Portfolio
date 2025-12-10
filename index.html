@@ -5,20 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roshan Zameer — Portfolio</title>
   <style>
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: #ffffff;
-        color: #1a1a1a;
-        line-height: 1.6;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
     }
-    header {
-        background: #ffffff;
+    body {
+      background: #0d0d0d;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #111111;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #cccccc;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+    .hero {
+      text-align: center;
+      padding: 180px 20px 130px;
+      background: #0b0b0b;
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #00aaff;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #bbbbbb;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border-radius: 6px;
+      border: 2px solid #00aaff;
+      background: transparent;
+      color: #00aaff;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background: #00aaff;
+      color: #000;
+    }
+    .btn-primary {
+      background: #00aaff;
+      color: #000;
+    }
+    section {
+      padding: 100px 10%;
+    }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      border-left: 5px solid #00aaff;
+      padding-left: 10px;
+    }
+    .card {
+      background: #141414;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #1f1f1f;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0,170,255,0.1);
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .skills span {
+      background: #1a1a1a;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #222;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0a0a0a;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-
   <nav>
-    <div><strong>Roshan Zameer</strong></div>
+    <div><strong style="color:#00aaff; font-size:20px;">Roshan Zameer</strong></div>
     <div>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -34,22 +130,22 @@
     <button class="btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Contact</button>
   </section>
 
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Me</h2>
     <div class="card">
       <p>Hello! I'm Roshan Zameer — an enthusiastic and curious beginner developer passionate about learning how software systems work at their core. I am currently building my foundation in programming with a focus on C++, Python, and frontend development.</p>
-      <p>I have a strong interest in operating systems, command-line tools, and understanding how low-level components interact with hardware. Even though I am at an early stage in my coding journey, my dedication to improving daily and experimenting with new technologies keeps me progressing steadily.</p>
-      <p>One of my most memorable experiences was participating in a hybrid hackathon, where my team and I built a functioning mobile app. This experience taught me teamwork, idea execution, problem-solving under pressure, and how to think like a developer.</p>
-      <p>My goal is to learn best practices, write clean and efficient code, contribute to team projects, and explore advanced OS concepts such as process management, memory handling, and system-level programming.</p>
+      <p>I love exploring operating systems, command-line tools, and understanding how low-level components interact. My dedication to daily improvement keeps me progressing steadily.</p>
+      <p>One of my most memorable experiences was participating in a hybrid hackathon where my team and I built a mobile app. This taught me teamwork, idea execution, and problem‑solving under pressure.</p>
+      <p>My goal is to write clean, efficient code, contribute to projects, and deepen my knowledge in system-level programming and OS concepts.</p>
     </div>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="card skills">
+    <div class="skills">
       <span>C++ — Basic Syntax & Logic Building</span>
-      <span>Python — Beginner Level Automation & Scripting</span>
-      <span>HTML & CSS — Website Layout & Styling</span>
+      <span>Python — Beginner Automation & Scripting</span>
+      <span>HTML & CSS — Layout & Styling</span>
       <span>Git & GitHub — Version Control Basics</span>
       <span>Problem Solving</span>
       <span>Debugging Fundamentals</span>
@@ -58,40 +154,39 @@
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
-      <h3>Hybrid Hackathon App</h3>
-      <p>This app was developed during a hybrid hackathon event where teamwork, creativity, and quick thinking were essential. I contributed to the app's functionality, layout ideas, and implementation steps. This project helped me understand practical development workflows and how features evolve from ideas into functional components.</p>
-      <p>Technologies involved: Basic app development tools, UI planning, and collaborative version control.</p>
+      <h3 style="color:#00aaff;">Hybrid Hackathon App</h3>
+      <p>Developed during a hybrid hackathon event where teamwork and creativity were crucial. I worked on functionality, layout ideas, and feature implementation.</p>
+      <p>Tools used: App development basics, UI planning, collaborative workflow.</p>
     </div>
+    <br>
 
     <div class="card">
-      <h3>Beginner Web Experiments</h3>
-      <p>I have created small web-based projects to practice HTML, CSS, and JavaScript fundamentals. These include simple UI layouts, interactive buttons, and responsive structures. These experiments help me improve visually and think more creatively.</p>
+      <h3 style="color:#00aaff;">Beginner Web Experiments</h3>
+      <p>Small projects using HTML, CSS, and JavaScript to explore layouts, buttons, and responsiveness. These experiments help me gain confidence in web design.</p>
     </div>
+    <br>
 
     <div class="card">
-      <h3>Command-Line Practice</h3>
-      <p>I frequently practice using command-line tools to understand how systems work under the hood. This includes directory navigation, file handling, running scripts, and exploring basic shell concepts.</p>
+      <h3 style="color:#00aaff;">Command-Line Practice</h3>
+      <p>Practicing terminal commands to better understand file handling, scripting, and system operations. Helps me think like a system-level programmer.</p>
     </div>
-
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact</h2>
     <div class="card">
-      <p>Email: rzoshan46@gmail.com</p>
-      <p>Phone: 9632506489</p>
-      <p>Feel free to reach out for collaborations, learning discussions, or project contributions!</p>
+      <p>Email: <span style="color:#00aaff;">rzoshan46@gmail.com</span></p>
+      <p>Phone: <span style="color:#00aaff;">9632506489</span></p>
+      <p>Feel free to reach out for collaborations or discussions!</p>
     </div>
   </section>
 
   <footer>
     © 2025 Roshan Zameer — Portfolio
   </footer>
-
 </body>
 </html>
-
